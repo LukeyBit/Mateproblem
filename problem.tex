@@ -99,8 +99,16 @@ Skalmetoden get oss att skålen har volymen $V\approx 3938.7\text{ cm}^3$.
 \section{Uppgift 2}
 \subsection*{Designa två liknande skålar vars respektive volym är 3 liter.}
 
-För att designa två liknande skålar vars respektive volym är 3 liter använder vi processen för uppgift 1 omvänd. Vi börjar med att ställa upp en ekvation för volymen av skålen, $V$ som i detta fall är 3 liter eller 3000 cm$^3$:
-
+För att designa två liknande skålar vars respektive volym är 3 liter börjar med att bestämma radien av skålens bottenyta. För den första skålen Skål 1, bestämmer jag att radien ska vara 4 cm. För den andra skålen Skål 2, bestämmer jag att radiens ska vara 6 cm.
+\\\\
+Jag börjar med att beräkna formen av Skål 1:
+\begin{align*}
+    f(x)&=kx^2-m\\
+    f(x)&=k(x-4)(x+4)\\
+    f(x)&=k(x^2-16)\\
+    f(x)&=kx^2-16k\\
+\end{align*}
+Då vi vet att $f(x)=y$ och att $f(x)=kx^2-16k$ vet vi att $y=kx^2-16k$. Om vi än en gång bestämmer att $g(y)=x$ kan vi räkna ut den primitiva funktionen $H(y)$ till $h(y)={g(y)}^2$:
 \begin{align*}
     V&=3000\\
     V&=\pi\int_{0}^{13}{g(y)}^2dy\\
@@ -114,12 +122,12 @@ Då vi vet att $g(y)=x$ och att $f(x)=y$ och att $f(x)=kx^2-m$ vet vi att ${g(y)
     H(y)&=\frac{1}{2k}y^2+\frac{m}{k}y+C\\
 \end{align*}
 Vilket ger oss att $H(y)=\frac{1}{2k}y^2+\frac{m}{k}y+C$.
-\newpage
-Vi kan nu skriva om formeln $3000=\pi\int_{0}^{13}{g(y)}^2dy$:
+Vi kan nu skriva om formeln $3000=\pi\int_{0}^{l}{g(y)}^2dy$ där $l$ är skålens höjd och den övre integrationsgränsen:
 
 \begin{align*}
-    3000&=\pi\int_{0}^{13}{h(y)}dy\\
-    3000&=\pi\int_{0}^{13}{h(y)}dy\Rightarrow 3000=\pi{\left[{H(y)}\right]}_{0}^{l}\\
+    3000&=\pi\int_{0}^{l}{h(y)}dy\\
+    3000&=\pi\int_{0}^{l}{h(y)}dy\Rightarrow 3000=\pi{\left[{H(y)}\right]}_{0}^{l}\\
+    3000=\pi{\left[{H(y)}\right]}_{0}^{l}&=\pi\left(\frac{1}{2k}{(l)}^2+\frac{m}{k}(l)-\frac{1}{2k}{(0)}^2-\frac{m}{k}(0)\right)\\
 \end{align*}
 
 
