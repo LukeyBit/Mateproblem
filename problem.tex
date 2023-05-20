@@ -105,6 +105,22 @@ För att designa två liknande skålar vars respektive volym är 3 liter använd
     V&=3000\\
     V&=\pi\int_{0}^{13}{g(y)}^2dy\\
     3000&=\pi\int_{0}^{13}{g(y)}^2dy\\
+\end{align*}\\
+Då vi vet att $g(y)=x$ och att $f(x)=y$ och att $f(x)=kx^2-m$ vet vi att ${g(y)}^2=\frac{y+m}{k}$. Om vi än en gång bestämmer att $h(y)={g(y)}^2$ kan vi räkna ut den primitiva funktionen $H(y)$ till $h(y)$:
+
+\begin{align*}
+    h(y)&=\frac{y+m}{k}\\
+    h(y)&=\frac{1}{k}y+\frac{m}{k} \Rightarrow H(y)=\frac{1/k}{2}y^2+\frac{m}{k}y+C\\
+    H(y)&=\frac{1}{2k}y^2+\frac{m}{k}y+C\\
 \end{align*}
+Vilket ger oss att $H(y)=\frac{1}{2k}y^2+\frac{m}{k}y+C$.
+\newpage
+Vi kan nu skriva om formeln $3000=\pi\int_{0}^{13}{g(y)}^2dy$:
+
+\begin{align*}
+    3000&=\pi\int_{0}^{13}{h(y)}dy\\
+    3000&=\pi\int_{0}^{13}{h(y)}dy\Rightarrow 3000=\pi{\left[{H(y)}\right]}_{0}^{l}\\
+\end{align*}
+
 
 \end{document}
