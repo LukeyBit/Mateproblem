@@ -3,6 +3,7 @@
 \usepackage[swedish]{babel}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{float}
 
 \title{Omfångsrikt problem: Mätning med märkning}
 \author{Lukas Anderson}
@@ -11,15 +12,13 @@
 \begin{document}
 \maketitle
 
-\section{Problemförklaring}
+\section*{Problemförklaring}
 Ett företag ska designa en serie nya skålar. En av skålarna ska ha en cirkulär bottenyta med radien 7 cm och en cirkulär öppning med radien 12 cm. Skålens höjd ska vara 13 cm och dess ytterkant sedd från sidan ska kunna approximeras med kurvan $y=kx^2-m$ som visas i Figur 1.
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figur1.png}
     \caption{Skålens utseende}
 \end{figure}
-
 \subsection*{Uppgifter}
 \begin{list}{-}{\leftmargin=1em\rightmargin=1em}
     \item Bestäm skålens volym med hjälp av {\it skivmetoden}.
@@ -28,10 +27,8 @@ Ett företag ska designa en serie nya skålar. En av skålarna ska ha en cirkul�
     \item Ta reda på hur man använder integraler för att beräkna volym med hjälp av {\it skalmetoden}.Redogör för hur metoden fungerar och lista ut hur du kan använda den för att beräkna volymen av någon av skålarna ovan. Beräkna också den volymen.
     \item Du behärskar nu två olika metoder för att beräkna volymen av en rotationskropp: {\it skivmetoden\/} och {\it skalmetoden}. Diskutera metodernas för- och nackdelar.
 \end{list}
-
-\section{Uppgift 1}
+\section*{Uppgift 1}
 \subsection*{Bestäm skålens volym med hjälp av {\it skivmetoden}.}
-
 Formeln för skivmetoden är $V=\pi\int_{0}^{13}{g(y)}^2dy$
 Där funktionen $g(y)$ är $f(x)$ uttryckt som en funktion av $y$.
 \\\\
@@ -56,13 +53,11 @@ För att finna $k$ löser vi följande ekvation:
 Vilket ger oss att $k=\frac{13}{95}$ och att $f(x)=y=\frac{13}{95}x^2-\frac{637}{95}$.
 \\\\
 Detta visas i Figur 2.
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figur2.jpg}
     \caption{Skålens utseende med $f(x)$ uttryckt som en funktion}
 \end{figure}
-
 \newpage
 Med $f(x)=\frac{13}{95}x^2-\frac{637}{95}$ kan vi räkna ut $g{(y)}^2$ då $g(y)=x$ och $f(x)=y$:
 \begin{align*}
@@ -74,7 +69,6 @@ Med $f(x)=\frac{13}{95}x^2-\frac{637}{95}$ kan vi räkna ut $g{(y)}^2$ då $g(y)
 \end{align*}
 Detta ger oss att $g{(y)}^2=\frac{95y+637}{13}$.
 För att räkna ut volymen med formeln $V=\pi\int_{0}^{13}{g(y)}^2dy$ måste vi först bestämma den primitiva funktionen $H(y)$ till funktionen $h(y)=g{(y)}^2=\frac{95y+637}{13}$.
-
 \begin{align*}
     h(y)&=\frac{95y+637}{13}\\
     h(y)&=\frac{95}{13}y+\frac{637}{13} \Rightarrow H(y)=\frac{95/13}{2}y^2+\frac{637}{13}y+C\\
@@ -94,33 +88,81 @@ Vi kan nu skriva om formeln $V=\pi\int_{0}^{13}{g(y)}^2dy$:
     V&=\frac{16055\pi}{26}+\frac{8271\pi}{13}\\
     V&\approx 3938.7\text{ cm}^3\\
 \end{align*}
-skivmetoden get oss att skålen har volymen $V\approx 3938.7\text{ cm}^3$.
+Skivmetoden ger oss att skålen har volymen $V\approx 3938.7\text{ cm}^3$.
 \newpage
-\section{Uppgift 2}
+\section*{Uppgift 2}
 \subsection*{Designa två liknande skålar vars respektive volym är 3 liter.}
-
 För att designa två liknande skålar vars respektive volym är 3 liter börjar med att bestämma radien av skålens bottenyta. För den första skålen Skål 1, bestämmer jag att radien ska vara 4 cm. För den andra skålen Skål 2, bestämmer jag att radiens ska vara 6 cm.
-\\\\
 \subsection*{Skål 1:}
-För att bestämma skålens form börjar jag med att bestämma funktionen $f(x)$ som beskriver skålens form. Jag bestämmer att skålen ska ha en bottenyta med radien 4 cm. Detta innebär att $f(x)$ har rötterna $(4,0) (-4,0)$ och att $f(x)=k(x-4)(x+4)$. $k$ i funktionen bestämmer hur aggresiv lutningen är på skålens sidor. Sambandet mellan $k$ och skålens form visas i Figur 3.
-
-\begin{figure}[h]
+För att bestämma skålens form börjar jag med att bestämma funktionen $f(x)$ som beskriver skålens form. Jag bestämmer att skålen ska ha en bottenyta med radien 4 cm. Detta innebär att $f(x)$ har rötterna $(4,0) (-4,0)$ och att $f(x)=k(x-4)(x+4)$. $k$ i funktionen bestämmer hur aggresiv lutningen är på skålens sidor. Sambandet mellan $k$ och skålens form visas i Figur 3a och 3b.\\
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figur3.gif}
+    \renewcommand{\thefigure}{3a}
+    \includegraphics[width=0.6\textwidth]{figur3a.png}
     \caption{Skålens form uttrycky som $f(x)$ då $k$ går från $0.01$ till $0.3$.}
 \end{figure}
-
-Jag bestämmer att $k=0.1$ vilket ger mig att \\ $f(x)=0.1(x-4)(x+4)$.
+\begin{figure}[H]
+    \centering
+    \renewcommand{\thefigure}{3b}
+    \includegraphics[width=0.6\textwidth]{figur3b.png}
+    \caption{Skålens form uttrycky som $f(x)$ då $k$ går från $0.01$ till $0.3$.}
+\end{figure}
+Jag bestämmer att $k=0.1$ vilket ger $f(x)=0.1(x-4)(x+4)$.
 \\\\
 Funktionen $f(x)$ kan då skrivas i formen $kx^2-m$:
-
 \begin{align*}
     f(x)&=0.1(x-4)(x+4)\\
     f(x)&=0.1(x^2-16)\\
     f(x)&=0.1x^2-1.6\\
 \end{align*}
-
-
-
+\\
+Detta ger oss att $f(x)=0.1x^2-1.6$ som visas i Figur 4.
+\begin{figure}[H]
+    \centering
+    \renewcommand{\thefigure}{4}
+    \includegraphics[width=0.8\textwidth]{figur4.png}
+    \caption{Skålens utseende med $f(x)$ uttryckt som en funktion}
+\end{figure}
+Då vi har funktionen $f(x)$ kan vi räkna ut $g{(y)}^2$ då $g(y)=x$ och $f(x)=y$:
+\begin{align*}
+    0.1x^2-1.6&=y\\
+    0.1x^2&=y+1.6\\
+    x^2&=\frac{y+1.6}{0.1}\\
+    g{(y)}^2&=\frac{y+1.6}{0.1}\\
+    g{(y)}^2&=10y+16\\
+\end{align*}
+Detta ger oss att $g{(y)}^2=10y+16$.
+Vi bestämmer att funktionen $h(y)=g{(y)}^2$ och söker nu den primitiva funktionen $H(y)$ till $h(y)$. Vi finner $H(y)$:
+\begin{align*}
+    h(y)&=10y+16 \Rightarrow H(y)=5y^2+16y+C\\
+    H(y)&=5y^2+16y+C\\
+\end{align*}
+Detta ger oss att $H(y)=5y^2+16y+C$.\\
+Vi kan nu skriva om formeln $V=\pi\int_{0}^{l}{g(y)}^2dy$ där $l$ är skålens höjd och volymen $V$ är $3000$ cm$^3$:
+\begin{align*}
+    V&=\pi\int_{0}^{l}{g(y)}^2dy\\
+    3000&=\pi\int_{0}^{l}{h(y)}dy\\
+    3000&=\pi\int_{0}^{l}{h(y)}dy\Rightarrow 3000=\pi{\left[{H(y)}\right]}_{0}^{l}\\
+    3000&=\pi\left(5{l}^2+16l-5{(0)}^2-16(0)\right)\\
+    3000&=\pi\left(5{l}^2+16l\right)\\
+\end{align*}
+Detta ger oss andragradsekvationen $3000=\pi\left(5{l}^2+16l\right)$. Denna löser vi för $l$ med hjälp av PQ-formeln:
+\begin{align*}
+    3000&=\pi\left(5{l}^2+16l\right)\\
+    0&=5\pi{l}^2+16\pi{l}-3000\\
+    0&=5{l}^2+16{l}-\frac{3000}{\pi}\\
+    0&=l^2+\frac{16}{5}l-\frac{3000}{\pi5}\\
+    0&=l^2+\frac{16}{5}l-\frac{600}{\pi}\\
+    l&=-\frac{\frac{16}{5}}{2}\pm\sqrt{{\left(\frac{\frac{16}{5}}{2}\right)}^2+\left(\frac{600}{\pi}\right)}\\
+    l&=-\frac{8}{5}\pm\sqrt{{\left(\frac{8}{5}\right)}^2+\left(\frac{600}{\pi}\right)}\\
+    l&=-\frac{8}{5}\pm\sqrt{\frac{64\pi+15000}{25\pi}}\\
+    l_1&\approx 12.3\text{ cm}\\
+    l_2&\approx -15.5\text{ cm}\\
+\end{align*}
+Detta ger att $l_1\approx 12.3\text{ cm}$ och $l_2\approx -15.5\text{ cm}$.
+Då $l$ är skålens höjd kan vi förkasta $l_2$ då den är negativ. Detta ger oss att höjden $l\approx 12.3\text{ cm}$.\\
+Skål 1 har då en bottenyta med radien 4 cm, en höjd på 12.3 cm samt en volym på 3 liter.
+\subsection*{Skål 2:}
+Vi följer samma process för denna skål. Vi börjar med att bestämma att bottenytan har en radie på 8 cm. Detta ger oss att $f(x)$ har rötterna $(8,0) (-8,0)$ och att $f(x)=k(x-8)(x+8)$. $k$ bestämmer vi är 0.2 vilket ger $f(x)=0.2(x-8)(x+8)$. Denna funktion kan skrivas om till $f(x)=0.2x^2-6.4$ som visas i Figur 5.
 
 \end{document}
