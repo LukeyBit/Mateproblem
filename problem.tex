@@ -228,16 +228,27 @@ För att uppnå en högre noggrannhet i beräkningen av rotationskroppens volym 
     V&=2\pi\int_{a}^{b}x\cdot f(x) dx\\
 \end{align*}
 I integralen är integrationsgränserna a och b de två punkter där rotationskroppen börjar och slutar i x-led då kroppen roteras runt y-axeln.\\
-\newpage
 \subsection*{Beräkna volymen av Skål 2 med skalmetoden:}
-Funktionen som beskriver formen av Skål 2 är $f(x)=0.2x^2-\frac{64}{5}$. Då formeln för skalmetoden beräknar volymen mellan funktionen och x-axeln måste vi utesluta den del av funktionen som är under x-axeln. Detta gör vi genom att sätta integrationsgränserna till $a=8$ och b till den punkt där funktionen ger höjden av skålen $f(x)=10.6$. Vi adderar sedan volymen av en cylinder med radien 8 cm och höjden 10.6 cm för att få volymen av hela skålen. Vi beräknar volymen av skålen med skalmetoden:
+Funktionen som beskriver formen av Skål 2 är $f(x)=0.2x^2-\frac{64}{5}$. Då formeln för skalmetoden beräknar volymen mellan funktionen och x-axeln måste vi utesluta den del av funktionen som är under x-axeln. Detta gör vi genom att sätta integrationsgränserna till $a=8$ och b till den punkt där funktionen ger höjden av skålen $f(x)=10.6$. Vi adderar sedan volymen av en cylinder med radien 8 cm och höjden 10.6 cm för att få volymen av hela skålen. Grafen samt beräkningen av de två volymerna visas i Figur 8.
+\begin{figure}[H]
+    \centering
+    \renewcommand{\thefigure}{8}
+    \includegraphics[width=\textwidth]{figur8.png}
+    \caption{Demonstration av skalmetoden}
+\end{figure}
+Vi beräknar volymen av skålen med skalmetoden:\\
 \begin{align*}
     V&=V_{cylinder}+V_{skal}\\
     V_{cylinder}&=\pi 8^2\cdot 10.6\\
     V_{cylinder}&=\frac{3392}{5}\pi\\
     \\
-    f(x)=10.6&\Rightarrow x=3\sqrt{13}\ \ \ \text{(övre integrationsgränsen)}\\
-    \\
+\end{align*}
+Vi finner den övre integrationsgränsen:
+\begin{align*}
+    f(x)=10.6&\Rightarrow x=3\sqrt{13}
+\end{align*}
+Vi beräknar volymen av skålen från $x=8$ till $x=3\sqrt{13}$ med skalmetoden:
+\begin{align*}
     V_{skal}&=\int_{8}^{3\sqrt{13}}2\pi x\cdot f(x) dx\\
     V_{skal}&=2\pi\int_{8}^{3\sqrt{13}}x\cdot f(x) dx\\
     V_{skal}&=2\pi\int_{8}^{3\sqrt{13}}x\cdot (0.2x^2-\frac{64}{5}) dx\\
@@ -250,4 +261,9 @@ Funktionen som beskriver formen av Skål 2 är $f(x)=0.2x^2-\frac{64}{5}$. Då f
     V&=3013.8 \text { cm}^3\\
 \end{align*}
 Detta ger oss att $V\approx 3013.8 \text { cm}^3$ vilket stämmer med de beräkningar som gjordes med skivmetoden.
+\newpage
+\section*{Uppgift 4}
+\subsection*{Diskutera skalmetoden och skivmetoden}
+
+
 \end{document}
