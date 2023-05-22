@@ -163,6 +163,46 @@ Detta ger att $l_1\approx 12.3\text{ cm}$ och $l_2\approx -15.5\text{ cm}$.
 Då $l$ är skålens höjd kan vi förkasta $l_2$ då den är negativ. Detta ger oss att höjden $l\approx 12.3\text{ cm}$.\\
 Skål 1 har då en bottenyta med radien 4 cm, en höjd på 12.3 cm samt en volym på 3 liter.
 \subsection*{Skål 2:}
-Vi följer samma process för denna skål. Vi börjar med att bestämma att bottenytan har en radie på 8 cm. Detta ger oss att $f(x)$ har rötterna $(8,0) (-8,0)$ och att $f(x)=k(x-8)(x+8)$. $k$ bestämmer vi är 0.2 vilket ger $f(x)=0.2(x-8)(x+8)$. Denna funktion kan skrivas om till $f(x)=0.2x^2-6.4$ som visas i Figur 5.
-
+Vi följer samma process för denna skål. Vi börjar med att bestämma att bottenytan har en radie på 8 cm. Detta ger oss att $f(x)$ har rötterna $(8,0) (-8,0)$ och att $f(x)=k(x-8)(x+8)$. $k$ bestämmer vi är 0.2 vilket ger $f(x)=0.2(x-8)(x+8)$. Denna funktion kan skrivas om till $f(x)=0.2x^2-\frac{64}{5}$ som visas i Figur 5.
+\begin{figure}[H]
+    \centering
+    \renewcommand{\thefigure}{5}
+    \includegraphics[width=0.7\textwidth]{figur5.png}
+    \caption{Formen av Skål 2 uttryckt som en funktion $f(x)$}
+\end{figure}
+Vi kan nu räkna ut $g{(y)}^2$ då $g(y)=x$ och $f(x)=y$:
+\begin{align*}
+    0.2x^2-\frac{64}{5}&=y\\
+    0.2x^2&=y+\frac{64}{5}\\
+    x^2&=\frac{y+\frac{64}{5}}{\frac{1}{5}}\\
+    g{(y)}^2&=\frac{y+\frac{64}{5}}{\frac{1}{5}}\\
+    g{(y)}^2&=5y+64\\
+\end{align*}
+Detta ger oss att $g{(y)}^2=5y+64$.
+Vi bestämmer att funktionen $h(y)=g{(y)}^2$ och söker nu den primitiva funktionen $H(y)$ till $h(y)$. Vi finner $H(y)$:
+\begin{align*}
+    h(y)&=5y+64 \Rightarrow H(y)=\frac{5}{2}y^2+64y+C\\
+    H(y)&=\frac{5}{2}y^2+64y+C\\
+\end{align*}
+Detta ger oss att $H(y)=\frac{5}{2}y^2+64y+C$.
+\newpage
+Vi kan nu skriva om formeln $V=\pi\int_{0}^{l}{g(y)}^2dy$ där $l$ är skålens höjd och den övre integrationsgränsen och volymen $V$ är $3000$ cm$^3$:
+\begin{align*}
+    V&=\pi\int_{0}^{l}{g(y)}^2dy\\
+    3000&=\pi\int_{0}^{l}{h(y)}dy\\
+    3000&=\pi\int_{0}^{l}{h(y)}dy\Rightarrow 3000=\pi{\left[{H(y)}\right]}_{0}^{l}\\
+    3000&=\pi\left(\frac{5}{2}{l}^2+64l-\frac{5}{2}{(0)}^2-64(0)\right)\\
+    3000&=\pi\left(\frac{5}{2}{l}^2+64l\right)\\
+    3000&=\pi\frac{5}{2}l^2+64\pi l\\
+    0&=\pi\frac{5}{2}l^2+64\pi l-3000\\
+    0&=\frac{5}{2}l^2+64l-\frac{3000}{\pi}\\
+    0&=l^2+\frac{128}{5}l-\frac{1200}{\pi}\\
+    l&=-\frac{\frac{128}{5}}{2}\pm\sqrt{{\left(\frac{\frac{128}{5}}{2}\right)}^2+\left(\frac{1200}{\pi}\right)}\\
+    l&=-\frac{64}{5}\pm\sqrt{{\left(\frac{64}{5}\right)}^2+\left(\frac{1200}{\pi}\right)}\\
+    l&=-\frac{64}{5}\pm\sqrt{\frac{4096\pi+30000}{25\pi}}\\
+    l_1&\approx 10.6\text{ cm}\\
+    l_2&\approx -36.2\text{ cm}\\
+\end{align*}
+Detta ger att $l_1\approx 10.6\text{ cm}$ och $l_2\approx -36.2\text{ cm}$. Än en gång ignorerar vi den negativa lösningen då skålens höjd ej kan vara negativ. Detta ger oss att höjden $l\approx 10.6\text{ cm}$. Skål 2 har då en bottenyta med radien 8 cm, en höjd på 10.6 cm samt en volym på 3 liter.
+\section*{Uppgift 3}
 \end{document}
