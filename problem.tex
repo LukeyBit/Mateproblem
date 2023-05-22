@@ -24,7 +24,7 @@ Ett företag ska designa en serie nya skålar. En av skålarna ska ha en cirkul�
     \item Bestäm skålens volym med hjälp av {\it skivmetoden}.
     \item Designa två liknande skålar vars respektive volym är 3 liter.
     \item Eftersom skålarna är tänkta att användas vid bakning, så vill företaget att man på insidan av skålen ska kunna läsa av volymen. En av dina treliters-skålar ska ha sådana märkningar för varje liter. Bestäm på vilka höjder dessa märkningar ska sitta.
-    \item Ta reda på hur man använder integraler för att beräkna volym med hjälp av {\it skalmetoden}.Redogör för hur metoden fungerar och lista ut hur du kan använda den för att beräkna volymen av någon av skålarna ovan. Beräkna också den volymen.
+    \item Ta reda på hur man använder integraler för att beräkna volym med hjälp av {\it skalmetoden}. Redogör för hur metoden fungerar och lista ut hur du kan använda den för att beräkna volymen av någon av skålarna ovan. Beräkna också den volymen.
     \item Du behärskar nu två olika metoder för att beräkna volymen av en rotationskropp: {\it skivmetoden\/} och {\it skalmetoden}. Diskutera metodernas för- och nackdelar.
 \end{list}
 \section*{Uppgift 1}
@@ -204,5 +204,15 @@ Vi kan nu skriva om formeln $V=\pi\int_{0}^{l}{g(y)}^2dy$ där $l$ är skålens 
     l_2&\approx -36.2\text{ cm}\\
 \end{align*}
 Detta ger att $l_1\approx 10.6\text{ cm}$ och $l_2\approx -36.2\text{ cm}$. Än en gång ignorerar vi den negativa lösningen då skålens höjd ej kan vara negativ. Detta ger oss att höjden $l\approx 10.6\text{ cm}$. Skål 2 har då en bottenyta med radien 8 cm, en höjd på 10.6 cm samt en volym på 3 liter.
+\newpage
 \section*{Uppgift 3}
+\subsection*{Vad är skalmetoden och hur används den för att beräkna volymen av en reotationskropp?}
+Skalmetoden är en metod för att beräkna volymen av en rotationskropp genom att dela upp kroppen i tunna cylinderformade skal. Dessa skal har en tjocklek $\Delta x$, radien $x_i$ och en höjd $f(x_i)$ där $f(x_i)$ är en funktion som beskriver formen av kroppen och där $x_i$ är integrationsvariabeln. Detta visas i Figur 6.
+\begin{figure}[H]
+    \centering
+    \renewcommand{\thefigure}{6}
+    \includegraphics[width=\textwidth]{figur6.png}
+    \caption{Demonstration av skalmetoden}
+\end{figure}
+Om man vecklar ut ett av dessa skal till ett rätblock får rätblocket volymen $V_i=2\pi x_i\cdot f(x_i)\cdot \Delta x$ 
 \end{document}
