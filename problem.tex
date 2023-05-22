@@ -206,6 +206,27 @@ Vi kan nu skriva om formeln $V=\pi\int_{0}^{l}{g(y)}^2dy$ där $l$ är skålens 
 Detta ger att $l_1\approx 10.6\text{ cm}$ och $l_2\approx -36.2\text{ cm}$. Än en gång ignorerar vi den negativa lösningen då skålens höjd ej kan vara negativ. Detta ger oss att höjden $l\approx 10.6\text{ cm}$. Skål 2 har då en bottenyta med radien 8 cm, en höjd på 10.6 cm samt en volym på 3 liter.
 \newpage
 \section*{Uppgift 3}
+\subsection*{Märkning av volym}
+Då skålarna vi designat ska användas vid bakning måste det finnas en gradering av volym på insidan av skålarna. I detta fall använder vi Skål 2 som exempel. För att beräkna var dessa graderingar ska sitta använder vi samma metod som vi använde då vi sökte höjden av Skål 2. Vi börjar med att ställa upp ekvationen för volymen vid den första markeringen, 1 liter, $V=1000$ då vi än en gång söker höjden $l$ som är den övre integrationsgränsen:
+\begin{align*}
+    V&=\pi\int_{0}^{l}{g(y)}^2dy\\
+    1000&=\pi\int_{0}^{l}{h(y)}dy\\
+    1000&=\pi\int_{0}^{l}{h(y)}dy\Rightarrow 3000=\pi{\left[{H(y)}\right]}_{0}^{l}\\
+    1000&=\pi\left(\frac{5}{2}{l}^2+64l-\frac{5}{2}{(0)}^2-64(0)\right)\\
+    1000&=\pi\left(\frac{5}{2}{l}^2+64l\right)\\
+    1000&=\pi\frac{5}{2}l^2+64\pi l\\
+    0&=\pi\frac{5}{2}l^2+64\pi l-1000\\
+    0&=\frac{5}{2}l^2+64l-\frac{1000}{\pi}\\
+    0&=l^2+\frac{128}{5}l-\frac{2000}{\pi}\\
+    l&=-\frac{\frac{128}{5}}{2}\pm\sqrt{{\left(\frac{\frac{128}{5}}{2}\right)}^2+\left(\frac{2000}{\pi}\right)}\\
+    l_1&=4.3\text{ cm}\\
+    l_2&=-29.9\text{ cm}\\
+\end{align*}
+\newpage
+Detta ger oss att $l_1=4.3\text{ cm}$ och $l_2=-29.9\text{ cm}$. Vi förkastar återigen den negativa lösningen då höjden ej kan vara negativ. Detta ger oss att höjden av den första markeringen, 1 liter, är $l=4.3\text{ cm}$.
+\\\\
+Vi upprepar processen för att finna höjden av den andra markeringen, 2 liter, vilket ger höjden $l=7.7\text{ cm}$.\\
+\section*{Uppgift 4}
 \subsection*{Vad är skalmetoden och hur används den för att beräkna volymen av en reotationskropp?}
 Skalmetoden är en metod för att beräkna volymen av en rotationskropp genom att dela upp kroppen i tunna cylinderformade skal. Dessa skal har en tjocklek $\Delta x$, radien $x_i$ och en höjd $f(x_i)$ där $f(x_i)$ är en funktion som beskriver formen av kroppen och där $x_i$ är integrationsvariabeln. Detta visas i Figur 6.
 \begin{figure}[H]
@@ -215,14 +236,16 @@ Skalmetoden är en metod för att beräkna volymen av en rotationskropp genom at
     \caption{Demonstration av skalmetoden}
 \end{figure}
 Om man vecklar ut ett av dessa skal till ett rätblock får rätblocket volymen $V_i=2\pi x_i\cdot f(x_i)\cdot \Delta x$. Detta visas i Figur 7.
+\newpage
 \begin{figure}[H]
     \centering
     \renewcommand{\thefigure}{7}
     \includegraphics[width=\textwidth]{figur7.png}
     \caption{Demonstration av skalmetoden}
 \end{figure}
-\newpage
-För att uppnå en högre noggrannhet i beräkningen av rotationskroppens volym låter vi istället $\Delta x$ gå mot 0 medan antalet skal går mot oändligheten och summerar volymen av alla skal. Detta ger oss att volymen $V$ av rotationskroppen är:
+För att uppnå en högre noggrannhet i beräkningen av\\
+rotationskroppens volym låter vi istället $\Delta x$ gå mot 0 medan antalet skal går mot oändligheten och summerar volymen av alla skal. Detta ger oss att volymen $V$ av 
+rotationskroppen är:
 \begin{align*}
     V&=\int_{a}^{b}2\pi x\cdot f(x) dx\\
     V&=2\pi\int_{a}^{b}x\cdot f(x) dx\\
@@ -262,8 +285,16 @@ Vi beräknar volymen av skålen från $x=8$ till $x=3\sqrt{13}$ med skalmetoden:
 \end{align*}
 Detta ger oss att $V\approx 3013.8 \text { cm}^3$ vilket stämmer med de beräkningar som gjordes med skivmetoden.
 \newpage
-\section*{Uppgift 4}
+\section*{Uppgift 5}
 \subsection*{Diskutera skalmetoden och skivmetoden}
+Både skal- och skivmetoden är två metoder för att beräkna volymen av en rotationskropp. Båda metoderna fungerar genom att dela upp kroppen i mindre delar och sedan summera volymen av dessa delar. Skivmetoden delar upp kroppen i skivor med tjockleken $\Delta y$ medan skalmetoden delar upp kroppen i skal med tjockleken $\Delta x$. De båda metoderna kan anpassas för att för att beräkna rotationer runt både x- och y-axeln. Därför är metodernas användbarhet lika stor men det finns vissa skillnader mellan metoderna. Då skalmetoden tillåter rotation runt y-axeln utan att behöva anpassa om en funktion som $f(x)=y$ till att bli en funktion $f(y)=x$ är skalmetoden mer användbar för att beräkna volymen av en rotationskropp runt y-axeln. Skivmetoden är dock mer användbar för att beräkna volymen av en\\ rotationskropp runt x-axeln då den inte kräver någon anpassning av funktionen $f(x)=y$ till $f(y)=x$. På detta sätt är dessa metoder varandras inverser och komplementerar varandra. Det är därför användbart att kunna båda metoderna för att uppnå maximal effektivitet vid beräkningar av volymer av rotationskroppar, oavsett vilken axel de roterar runt.
 
+\subsection*{Utvärdering av resultat}
+Då båda metoderna gav samma resultat för volymen av Skål 2 kan vi anta att resultatet är korrekt. Sammma metod som användes för att beräkna volymen av Skål 2 användes för att beräkna volymen av Skål 1. Då denna metod blivit bekräftas av de båda beräkningarna av Skål 2:s volym är beräkningarna pålitliga.
 
+\subsection*{Tillämpningar}
+Det senario som ställs fram i uppgiften är ett av de många tillämplingarna av dessa metoder i verkligheten. Då varje skål, glas och behållare i världen måste designas för att kunna produceras med lämpliga dimensioner är dessa metoder användbara för att beräkna volymen av dessa behållare. Dessa metoder är även användbara inom utvecklingen av datorgrafik och skapandet av digitala tredimensionella objekt då dessa objekt kan beskrivas med\\ funktioner som kan användas för att beräkna volymen och formen av en dator.
+
+\subsection*{Förbättringar}
+En förbättring av arbetet hade varit att göra designen av Skål 1 och Skål 2 mer realistiskt genom att ta hänsyn till skålarnas syfte och det fortsatta arbetet med dem under det första steget av designen. Exempelvis hade en skål för bakning som skall kunna mäta volymer upp till 3 liter i verkligheten haft en större volym än 3 liter då en märkning för mätning ej går att placeras på skålens kant. Detta hade lett till att skålarna hade fått en mer realistisk form och volym.
 \end{document}
