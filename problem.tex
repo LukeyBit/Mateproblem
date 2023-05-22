@@ -214,5 +214,39 @@ Skalmetoden är en metod för att beräkna volymen av en rotationskropp genom at
     \includegraphics[width=\textwidth]{figur6.png}
     \caption{Demonstration av skalmetoden}
 \end{figure}
-Om man vecklar ut ett av dessa skal till ett rätblock får rätblocket volymen $V_i=2\pi x_i\cdot f(x_i)\cdot \Delta x$ 
+Om man vecklar ut ett av dessa skal till ett rätblock får rätblocket volymen $V_i=2\pi x_i\cdot f(x_i)\cdot \Delta x$. Detta visas i Figur 7.
+\begin{figure}[H]
+    \centering
+    \renewcommand{\thefigure}{7}
+    \includegraphics[width=\textwidth]{figur7.png}
+    \caption{Demonstration av skalmetoden}
+\end{figure}
+\newpage
+För att uppnå en högre noggrannhet i beräkningen av rotationskroppens volym låter vi istället $\Delta x$ gå mot 0 medan antalet skal går mot oändligheten och summerar volymen av alla skal. Detta ger oss att volymen $V$ av rotationskroppen är:
+\begin{align*}
+    V&=\int_{a}^{b}2\pi x\cdot f(x) dx\\
+    V&=2\pi\int_{a}^{b}x\cdot f(x) dx\\
+\end{align*}
+I integralen är integrationsgränserna a och b de två punkter där rotationskroppen börjar och slutar i x-led då kroppen roteras runt y-axeln.\\
+\newpage
+\subsection*{Beräkna volymen av Skål 2 med skalmetoden:}
+Funktionen som beskriver formen av Skål 2 är $f(x)=0.2x^2-\frac{64}{5}$. Då formeln för skalmetoden beräknar volymen mellan funktionen och x-axeln måste vi utesluta den del av funktionen som är under x-axeln. Detta gör vi genom att sätta integrationsgränserna till $a=8$ och b till den punkt där funktionen ger höjden av skålen $f(x)=10.6$. Vi adderar sedan volymen av en cylinder med radien 8 cm och höjden 10.6 cm för att få volymen av hela skålen. Vi beräknar volymen av skålen med skalmetoden:
+\begin{align*}
+    V&=V_{cylinder}+V_{skal}\\
+    V_{cylinder}&=\pi 8^2\cdot 10.6\\
+    V_{cylinder}&=\frac{3392}{5}\pi\\
+    \\
+    f(x)=10.6&\Rightarrow x=3\sqrt{13}\ \ \ \text{(övre integrationsgränsen)}\\
+    \\
+    V_{skal}&=\int_{8}^{3\sqrt{13}}2\pi x\cdot f(x) dx\\
+    V_{skal}&=2\pi\int_{8}^{3\sqrt{13}}x\cdot f(x) dx\\
+    V_{skal}&=2\pi\int_{8}^{3\sqrt{13}}x\cdot (0.2x^2-\frac{64}{5}) dx\\
+    V_{skal}&=2\pi\int_{8}^{3\sqrt{13}}0.2x^3-\frac{64}{5}x dx\\
+    V_{skal}&=2\pi{\left(\frac{0.2}{4}x^4-\frac{64}{10}x^2\right)}_{8}^{3\sqrt{13}}\\
+    V_{skal}&=2\pi\left(\frac{0.2}{4}{(3\sqrt{13})}^4-\frac{64}{10}{(3\sqrt{13})}^2-\frac{0.2}{4}{(8)}^4+\frac{64}{10}{(8)}^2\right)\\
+    V_{skal}&=2\pi\left(\frac{0.2}{4}{(3\sqrt{13})}^4-\frac{64}{10}{(3\sqrt{13})}^2-\frac{0.2}{4}{(8)}^4+\frac{64}{10}{(8)}^2\right)\\
+    \\
+    V&=V_{cylinder}+V_{skal}\\
+    V&=3013.8 \text { cm}^3\\
+\end{align*}
 \end{document}
